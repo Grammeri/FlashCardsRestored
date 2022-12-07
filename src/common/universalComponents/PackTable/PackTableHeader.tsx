@@ -14,6 +14,7 @@ interface EnhancedTableProps {
   onRequestSort?: (event: React.MouseEvent<unknown>, property: keyof Data) => void
   order?: Order
   orderBy?: string
+  rowCount: number
 }
 interface HeadCell {
   disablePadding: boolean
@@ -57,7 +58,9 @@ const headCells: readonly HeadCell[] = [
 export function EnhancedTableHead(props: EnhancedTableProps) {
   const { order, onRequestSort, orderBy } = props
   const createSortHandler = (property: keyof Data) => (event: React.MouseEvent<unknown>) => {
-    onRequestSort(event, property)
+    if (onRequestSort) {
+      onRequestSort(event, property)
+    }
   }
 
   return (

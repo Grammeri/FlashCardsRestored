@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Grammeri.github.io/team-project",
+  "homepage": "https://Grammeri.github.io/FlashCardsRestored",
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
@@ -50,7 +50,9 @@
     "deploy": "gh-pages -d build",
     "format": "prettier --write \"src/**/*.ts*\" ",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts*\" --fix",
-    "fix": "yarn format && yarn lint"
+    "fix": "yarn format && yarn lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

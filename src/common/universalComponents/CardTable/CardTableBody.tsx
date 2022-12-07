@@ -1,13 +1,11 @@
+/*
 import * as React from 'react'
 
-import DeleteIcon from '@mui/icons-material/Delete'
 import FilterListIcon from '@mui/icons-material/FilterList'
 import Box from '@mui/material/Box'
 import Checkbox from '@mui/material/Checkbox'
 import FormControlLabel from '@mui/material/FormControlLabel'
-import IconButton from '@mui/material/IconButton'
 import Paper from '@mui/material/Paper'
-import { alpha } from '@mui/material/styles'
 import Switch from '@mui/material/Switch'
 import Table from '@mui/material/Table'
 import TableBody from '@mui/material/TableBody'
@@ -19,7 +17,6 @@ import TableRow from '@mui/material/TableRow'
 import TableSortLabel from '@mui/material/TableSortLabel'
 import Toolbar from '@mui/material/Toolbar'
 import Tooltip from '@mui/material/Tooltip'
-import Typography from '@mui/material/Typography'
 import { visuallyHidden } from '@mui/utils'
 
 interface Data {
@@ -39,7 +36,7 @@ function createData(question: string, answer: string, lastUpdated: string, grade
 }
 
 const rows = [
-  /*  createData('Cupcake', 305, 3.7, 67, 4.3),
+  /!*  createData('Cupcake', 305, 3.7, 67, 4.3),
     createData('Donut', 452, 25.0, 51, 4.9),
     createData('Eclair', 262, 16.0, 24, 6.0),
     createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
@@ -51,7 +48,7 @@ const rows = [
     createData('Lollipop', 392, 0.2, 98, 0.0),
     createData('Marshmallow', 318, 0, 81, 2.0),
     createData('Nougat', 360, 19.0, 9, 37.0),
-    createData('Oreo', 437, 18.0, 63, 4.0),*/
+    createData('Oreo', 437, 18.0, 63, 4.0),*!/
 ]
 
 function descendingComparator<T>(a: T, b: T, orderBy: keyof T) {
@@ -147,7 +144,7 @@ function EnhancedTableHead(props: EnhancedTableProps) {
     <TableHead>
       <TableRow>
         <TableCell>
-          {/*<Checkbox
+          {/!*<Checkbox
             color="primary"
             indeterminate={numSelected > 0 && numSelected < rowCount}
             checked={rowCount > 0 && numSelected === rowCount}
@@ -155,7 +152,7 @@ function EnhancedTableHead(props: EnhancedTableProps) {
             inputProps={{
               'aria-label': 'select all desserts',
             }}
-          />*/}
+          />*!/}
         </TableCell>
         {headCells.map(headCell => (
           <TableCell
@@ -266,13 +263,13 @@ export const CardTable = () => {
               numSelected={selected.length}
               order={order}
               orderBy={orderBy}
-              /*onSelectAllClick={handleSelectAllClick}*/
+              /!*onSelectAllClick={handleSelectAllClick}*!/
               onRequestSort={handleRequestSort}
               rowCount={rows.length}
             />
             <TableBody>
-              {/* if you don't need to support IE11, you can replace the `stableSort` call with:
-              rows.sort(getComparator(order, orderBy)).slice() */}
+              {/!* if you don't need to support IE11, you can replace the `stableSort` call with:
+              rows.sort(getComparator(order, orderBy)).slice() *!/}
               {stableSort(rows, getComparator(order, orderBy))
                 .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                 .map((row, index) => {
@@ -304,7 +301,7 @@ export const CardTable = () => {
                       <TableCell align="right">{row.question}</TableCell>
                       <TableCell align="right">{row.lastUpdated}</TableCell>
                       <TableCell align="right">{row.answer}</TableCell>
-                      {/*<TableCell align="right">{row.protein}</TableCell>*/}
+                      {/!*<TableCell align="right">{row.protein}</TableCell>*!/}
                     </TableRow>
                   )
                 })}
@@ -337,3 +334,5 @@ export const CardTable = () => {
     </Box>
   )
 }
+*/
+export {}
