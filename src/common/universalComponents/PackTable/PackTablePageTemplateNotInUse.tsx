@@ -134,6 +134,8 @@ function EnhancedTableHead(props: EnhancedTableProps) {
     onRequestSort(event, property)
   }
 
+  console.log(1)
+
   return (
     <TableHead>
       <TableRow></TableRow>
