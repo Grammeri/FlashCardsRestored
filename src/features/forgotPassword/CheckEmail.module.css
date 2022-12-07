@@ -1,0 +1,19 @@
+.box{
+    width: 413px;
+    height: 408px;
+    margin: 15px;
+    padding: 20px;
+
+    color: steelblue;
+    text-align: center;
+
+    background: #FFFFFF;
+    border-radius: 2px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), -1px -1px 2px rgba(0, 0, 0, 0.1)
+}
+h3{
+    margin:15px;
+}
+
+
+

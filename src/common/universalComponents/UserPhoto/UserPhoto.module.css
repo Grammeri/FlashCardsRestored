@@ -1,0 +1,20 @@
+.standard {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 30px;
+
+    border: 1px solid steelblue;
+    }
+
+.small{
+    width: 60px;
+    height: 60px;
+
+    border: 1px solid white;
+   }
+
+.photoBox{
+    background: url("/src/assets/images/profile.svg") center no-repeat;
+    background-size: 100%;
+    border-radius: 50%;
+}
