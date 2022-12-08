@@ -9,9 +9,7 @@ import { ForgotPassword } from '../../features/forgotPassword/ForgotPassword'
 import { Login } from '../../features/Login/Login'
 import { Profile } from '../../features/profile/Profile'
 import { SignUp } from '../../features/SignUp/SignUp'
-import { CardsTablePage } from '../../pages/CardsTablePage'
 import { PackTablePage } from '../../pages/PackTablePage'
-import { CardTable } from '../universalComponents/CardTable/CardTable'
 
 type ContentPropsType = {}
 
@@ -33,9 +31,9 @@ export const Content = (props: ContentPropsType) => {
           <Route path="checkEmail" element={<CheckEmail />} />
           <Route path="*" element={<Navigate to={'404'} />} />
           <Route path="packTable" element={<PackTablePage />} />
-          <Route path="cardTable" element={<CardsTablePage />}>
-            <Route path=":id" element={<CardTable />} />
-          </Route>
+          {/*<Route path="cardTable" element={<CardsTablePage />}>*/}
+          {/*  <Route path=":id" element={<CardTable />} />*/}
+          {/*</Route>*/}
         </Routes>
       </div>
     </>
